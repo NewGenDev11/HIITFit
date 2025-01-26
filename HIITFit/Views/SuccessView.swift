@@ -8,11 +8,43 @@
 import SwiftUI
 
 struct SuccessView: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+    @Environment(\.dismiss) var dismiss
+    @Binding var selectedTab: Int
+
+  var body: some View {
+    ZStack {
+      VStack {
+        Image(systemName: "hand.raised.fill")
+            .resizable()
+            .frame(width: 75, height: 75)
+          .foregroundColor(.purple)
+        Text("High Five!")
+          .font(.largeTitle)
+          .fontWeight(.bold)
+        Text("""
+          Good job completing all four exercises!
+          Remember tomorrow's another day.
+          So eat well and get some rest.
+          """)
+        .foregroundColor(.gray)
+        .multilineTextAlignment(.center)
+      }
+      VStack {
+        Spacer()
+          Button("Continue") {
+          dismiss()
+              selectedTab = 9
+          }
+          .padding()
+      }
     }
+  }
 }
 
-#Preview {
-    SuccessView()
+struct SuccessView_Previews: PreviewProvider {
+    static var previews: some View {
+        SuccessView(selectedTab: .constant(3))
+            .presentationDetents([.medium, .large])
+
+    }
 }

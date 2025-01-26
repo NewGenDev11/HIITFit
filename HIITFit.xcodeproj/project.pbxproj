@@ -6,8 +6,19 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		82DC9B392D4462310049ACD7 /* step-up.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 82DC9B382D4462310049ACD7 /* step-up.mp4 */; };
+		82DC9B3B2D4462400049ACD7 /* sun-salute 2.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 82DC9B3A2D4462400049ACD7 /* sun-salute 2.mp4 */; };
+		82DC9B3D2D44624E0049ACD7 /* squat.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 82DC9B3C2D44624E0049ACD7 /* squat.mp4 */; };
+		82DC9B3F2D44625F0049ACD7 /* burpee 2.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 82DC9B3E2D44625F0049ACD7 /* burpee 2.mp4 */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		82DC9AFC2D442E420049ACD7 /* HIITFit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HIITFit.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		82DC9B382D4462310049ACD7 /* step-up.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "step-up.mp4"; sourceTree = "<group>"; };
+		82DC9B3A2D4462400049ACD7 /* sun-salute 2.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "sun-salute 2.mp4"; sourceTree = "<group>"; };
+		82DC9B3C2D44624E0049ACD7 /* squat.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = squat.mp4; sourceTree = "<group>"; };
+		82DC9B3E2D44625F0049ACD7 /* burpee 2.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "burpee 2.mp4"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -32,6 +43,10 @@
 		82DC9AF32D442E420049ACD7 = {
 			isa = PBXGroup;
 			children = (
+				82DC9B3E2D44625F0049ACD7 /* burpee 2.mp4 */,
+				82DC9B3C2D44624E0049ACD7 /* squat.mp4 */,
+				82DC9B3A2D4462400049ACD7 /* sun-salute 2.mp4 */,
+				82DC9B382D4462310049ACD7 /* step-up.mp4 */,
 				82DC9AFE2D442E420049ACD7 /* HIITFit */,
 				82DC9AFD2D442E420049ACD7 /* Products */,
 			);
@@ -109,6 +124,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				82DC9B3D2D44624E0049ACD7 /* squat.mp4 in Resources */,
+				82DC9B3B2D4462400049ACD7 /* sun-salute 2.mp4 in Resources */,
+				82DC9B3F2D44625F0049ACD7 /* burpee 2.mp4 in Resources */,
+				82DC9B392D4462310049ACD7 /* step-up.mp4 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
