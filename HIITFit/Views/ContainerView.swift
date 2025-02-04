@@ -18,7 +18,7 @@ struct ContainerView<Content: View>: View {
   var body: some View {
     ZStack {
       RoundedRectangle(cornerRadius: 25.0)
-        .foregroundColor(Color("background"))
+            .foregroundColor(Color("background"))
       VStack {
         Spacer()
         Rectangle()
@@ -26,7 +26,7 @@ struct ContainerView<Content: View>: View {
           .foregroundColor(Color("background"))
       }
       content
-    }
+    }// content calls from the content closure initialiazer performed
   }
 }
 
@@ -44,3 +44,4 @@ struct Container_Previews: PreviewProvider {
     .previewLayout(.sizeThatFits)
   }
 }
+// the conatiner view is responsible for formatting the background on which the content resides

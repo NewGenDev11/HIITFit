@@ -8,13 +8,13 @@
 
 
 import SwiftUI
-
+// exercise view gets read and write access to the HistoryStore without passing history from the contentview to ExerciseView as a parameter
 struct ExerciseView: View {
   @EnvironmentObject var history: HistoryStore
   @State private var showHistory = false
   @State private var showSuccess = false
   @State private var timerDone = false
-  @State private var showTimer = false
+  @State private var showTimer = false // State properties that when the properties change and update to the view being depeneded upon that propery
 
   @Binding var selectedTab: Int
   let index: Int
@@ -31,17 +31,18 @@ struct ExerciseView: View {
       showTimer.toggle()
     }
   }
-
+// history.addDoneExercise() adds the exercise name to the HistoryStore
   var doneButton: some View {
     Button("Done") {
       history.addDoneExercise(Exercise.exercises[index].exerciseName)
       timerDone = false
       showTimer.toggle()
+
       if lastExercise {
         showSuccess.toggle()
       } else {
         selectedTab += 1
-      }
+      }// if Done button is enabled then timerDone is now true so its reset to false to diable to Done button again
     }
   }
 
@@ -63,7 +64,7 @@ struct ExerciseView: View {
             .sheet(isPresented: $showSuccess) {
               SuccessView(selectedTab: $selectedTab)
                 .presentationDetents([.medium, .large])
-            }
+            }// timer done is disabled while timerDone is fals
         }
         .font(.title3)
         .padding()
@@ -72,11 +73,11 @@ struct ExerciseView: View {
           TimerView(
             timerDone: $timerDone,
             size: geometry.size.height * 0.07)
-        }
+        } // inclduing the timerview when showTimer is true and passes it a binding to the @state property timerDone and handles font size
 
         Spacer()
         RatingView(exerciseIndex: index)
-          .padding()
+          .padding()// passes the current exercise index
 
         historyButton
           .sheet(isPresented: $showHistory) {

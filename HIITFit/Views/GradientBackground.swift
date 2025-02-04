@@ -36,3 +36,4 @@ struct GradientBackground_Previews: PreviewProvider {
         GradientBackground()
     }
 }
+// gradient background handles the colors of the background scheme and handles configuration for the deadspace for the phones view the safe area 

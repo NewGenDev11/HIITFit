@@ -49,10 +49,12 @@ struct WelcomeView: View {
   }
 
   var getStartedButton: some View {
-    RaisedButton(buttonText: "Get Started") {
-      selectedTab = 0
-    }
-    .padding()
+      Button(action: { selectedTab = 0 }) {
+      Text("Get Started")
+      .raisedButtonTextStyle()
+      }
+      .buttonStyle(.raised)
+      .padding()
   }
 
   var historyButton: some View {
@@ -74,3 +76,4 @@ struct WelcomeView_Previews: PreviewProvider {
     WelcomeView(selectedTab: .constant(9))
   }
 }
+// the welcomeview is responsible for the first ui page and welcoming the user, it also handles the images into the vstack

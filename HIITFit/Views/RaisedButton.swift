@@ -36,10 +36,11 @@ struct RaisedButtonStyle: ButtonStyle {
       .frame(maxWidth: .infinity)
       .padding([.top, .bottom], 12)
       .background(
+        
         Capsule()
-          .foregroundColor(Color("background"))
-          .shadow(color: Color("drop-shadow"), radius: 4, x: 6, y: 6)
-          .shadow(color: Color("drop-highlight"), radius: 4, x: -6, y: -6))
+            .foregroundColor(Color.white.opacity(0.2))
+            .shadow(color: .purple, radius: 4, x: 6, y: 6)
+          .shadow(color: Color.white, radius: 4, x: -6, y: -6))
   }
 }
 
@@ -64,3 +65,4 @@ struct RaisedButton_Previews: PreviewProvider {
     .previewLayout(.sizeThatFits)
   }
 }
+// this section is responsible for the button styling and shdaing, also handles giving it such effects as raised or on hover 

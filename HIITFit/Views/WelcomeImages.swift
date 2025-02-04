@@ -75,3 +75,4 @@ struct WelcomeImages_Previews: PreviewProvider {
     }
   }
 }
+// this class handles all image controls spacing and shape size for the images 

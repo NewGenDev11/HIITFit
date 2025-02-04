@@ -9,7 +9,7 @@
 import SwiftUI
 
 struct HistoryView: View {
-    @EnvironmentObject var history: HistoryStore
+    @EnvironmentObject var history: HistoryStore // allows historyView to access history with out needing it passed as a parameter
   @Binding var showHistory: Bool
 
   var body: some View {
