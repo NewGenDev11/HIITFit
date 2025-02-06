@@ -1,0 +1,12 @@
+{
+  "data" : [
+    {
+      "filename" : "drop-highlight.json",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
